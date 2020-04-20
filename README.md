@@ -1,6 +1,6 @@
 ## Radar Target Generation and Detection
 
-1. FMCW Waveform design
+### FMCW Waveform design
 
     Specs
     ```matlab
@@ -20,7 +20,7 @@
     ```
 
 
-2. Simulate Target
+### Simulatio of Target
 
     ```matlab
     for i=1:length(t)          
@@ -35,16 +35,16 @@
     end
     ```
 
-3. Range FFT
+### Range FFT
 
 Range estimated through 1D FFT
 <img src="media/range.jpg"/>
 
-4. 2D CFAR
+### 2D CFAR
 
 <img src="media/velocity.jpg"/>
 
-- Choosing Training and guard cells
+#### Choosing Training and guard cells
 
     Since we are in a non dense and non cluttered environment, we can select a large number of training cells:
     Here we choose 
@@ -54,7 +54,7 @@ Range estimated through 1D FFT
     offset = 5; %dB
     ```
 
-- CFAR Implementation Steps
+#### CFAR Implementation Steps
     1. Iterate over the valid cells which can be considered for CFAR.
         a. Iterate over the grid that includes training and guard cells.
             - If a cell is outside guard region, consider the cell value. Else ignore.
@@ -89,7 +89,7 @@ Range estimated through 1D FFT
     end
     ```
 
-- Steps taken to suppress non thresholded cells
+#### Steps taken to suppress non thresholded cells
 
     We find the indexes of those cells whose values are neither 1 nor 0, creating a mask
     We set these indexes to 0
