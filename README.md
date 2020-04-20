@@ -1,7 +1,7 @@
 ## Radar Target Generation and Detection
 
 ### FMCW Waveform design
-Specs
+#### Specs
 ```matlab
 %Specs
 c = 3e8; %m/s
@@ -10,7 +10,7 @@ range_resolution = 1; %m
 max_velocity = 100; %m/s
 ```
 
-Results
+#### Results
 ```matlab
 Bsweep = c / (2*range_resolution);
 trip_time = (2 * max_range)/c;
