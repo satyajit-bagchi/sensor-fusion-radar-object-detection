@@ -32,7 +32,7 @@ for i=1:length(t)
 
     Mix(i) = Tx(i) .* Rx(i);
 end
-    ```
+```
 
 ### Range FFT
 
@@ -51,7 +51,7 @@ Here we choose
 Tr = 5; Td = 5;
 Gr = 2; Gd =2;
 offset = 5; %dB
-    ```
+ ```
 
 #### CFAR Implementation Steps
 1. Iterate over the valid cells which can be considered for CFAR.
